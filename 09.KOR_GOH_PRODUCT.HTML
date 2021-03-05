@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>동황토산메인페이지입니다.</title>
+    
+     <!-- meta tag 를 박아 넣습니다-->
+    <!-- 참조 : https://webclub.tistory.com/354 -->
+    <!-- 검색 엔진에서 검색되는 것-->
+    <meta name="author" content="CANSIV">
+    <meta name="Keywords" content="동황토산, 고려인삼, 면세점, 호간단,밀크씨슬, 간을챙기자" />
+    <!-- 검색 결과에 표시되는 문자를 지정합니다-->
+    <meta name="Description" content="동황토산, 고려인삼, 면세점, 호간단,밀크씨슬, 간을챙기자" />
+    <!-- 검색 로봇 제어 자세한건 검색-->
+    <meta name="Robots" content="INDEX,FOLLOW" />
+    <!-- 문자 코드의 종류 설정 모든 언어 인코딩-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <!-- 제작 날짜 인코딩-->
+    <!-- <meta name="Date" content="2021-02-20T24:00:00+09:00" /> -->
+    <!-- 제작 년월일-->
+    <meta http-equiv="Build" content="20210218" />
+    <!-- 웹페이지 쓰는 언어를 지정-->
+    <meta http-equiv="Content-Script-Type" content="text/javascript" /> 
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    
+    <!-- 브라우저 호환성 지정-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- 홈페이지 주제를 지정합니다-->
+    <meta http-equiv="Subject" content="동황토산, 고려인삼, 면세점, 호간단,밀크씨슬, 간을챙기자" />
+    <!-- 상단 타이틀 설정-->
+    <meta http-equiv="Title" content="최첨단 면세점" />
+    <!-- 웹 책임자 지정-->
+    <meta http-equiv="Other Agent" content="CANSIV" />
+    <!-- 메일 주소 지정-->
+    <!--<meta http-equiv="Reply-To" content="naver@naver.com" /> -->
+    <!--<meta http-equiv="Email" content="naver@naver.com" />-->
+    <!-- 배포자 지정-->
+    <meta http-equiv="Distribution" content="CANSIV" />
+    <!-- 저작권 지정-->
+    <meta http-equiv="Copyright" content="SSEBOL@HOTMAIL.COM" />
+
+    <!-- 마우스 오버시 이미지 관련 툴바 안생기게 하기-->
+    <meta http-equiv="imagetoolbar" content="no" />
+    
+    <!-- 캐쉬 안 사용하기 위해서 작업하기-->
+    <meta http-equiv="Cache-Control" content="no-cache" /> 
+    <meta http-equiv="Pragma" content="no-cache" />
+    <!-- 페이지 들어갈때 장면 전환 효과-->
+    <meta http-equiv="Page-Enter" content="revealtrans(Duration=1,Transition=12)" />
+    <meta property="og:url" content="http://dongwhang.com">
+    <meta property="og:title" content="동황토산">
+    <meta property="og:description" content="">
+    
+    <!--사이트 아이콘의 등록 -->
+   <meta property="og:image" content="00.IMG_ICO_AND_LOGO/128X128.ico">
+   <!--사이트 썸네일 등록 -->
+   <meta name="thumbnail" content="00.IMG_ICO_AND_LOGO/LOGO.png">
+   <!-- 파비콘적용 -->
+   <link rel="shortcut icon" href="00.IMG_ICO_AND_LOGO/favicon.ico">
+   <link rel="icon" href="00.IMG_ICO_AND_LOGO/favicon.ico">
+
+   <!-- 반응형이 되기 위해서 작업합니다.-->
+   <!--<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">-->
+   
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes, target-densitydpi=medium-dpi" />
+   
+   <!-- 반응형으로 안되니깐 다음과 같은 지랄 발각을 하게되네요?-->
+   
+    <style type="text/css">
+      
+    *{ margin: 0; padding: 0;} /*전체 0점에서 시작한다*/
+    
+    /*이 페이지의 랩이다.. 가로 1280으로 했고.. 보고 고치면 될듯하다.*/
+    div#WRAP_PAGE 
+    {
+      width: 1280px; 
+      height: 100%;
+      
+      margin-top: 0;         /*이거를 넣어야 아래 위 조절해도 밀리지 안음*/
+      margin: 0 auto;       /*이거 지울려면*/
+      
+      padding: 0;
+      position: relative;    /*중간으로 오게되는데?*/
+      /*color:#fff;*/ 
+      font-size: 10px;      /*나머지 폰트는 저기서 끌고오쟈*/
+      text-align: center;
+      /*text-transform: uppercase; 이러면 대문자로*/ 
+      /*background-size: cover;*/
+      overflow: hidden;
+      background-position: center;
+     }
+
+    div#HEADER
+    {
+      float: right; 
+      text-align: right;
+      width: 100%; 
+      height: 20px; 
+      /*background-color: #512da8;*/
+    }
+    
+    div#LEFT_NAVIGATION_MENU
+    {
+      margin:0;
+      padding: 0;
+      font-size: 20px; /*나중에 글자 쓸때는 지워야 한다*/
+      text-align: center;
+      width: 19%; /*메뉴의 좌 부터 우가지 늘어날 것 상대성이니깐.*/ 
+      float: left; 
+       
+      /*line-height: 900px; 글자 간격이 900이니깐 속지말자.*/
+      /*background-color: #4527a0;*/
+    }
+    
+    /*오른쪽 컨텐츠가 오는 쪽이다.. 이쪽은 임의로 100vh를 했다만 컨첸츠 따라 자동 조정되게..*/
+    div#RIGHT_CONTENT 
+    {
+      width: 80%; /*왼족에 20%의 크기 오른쪽은 80%의 크기로 대강 맞춘다.*/
+      position: relative;
+        
+      left: 10px; /*이거는 top: 80px;left: 30px;right: 0; 로 박스를 조정한다 신기하다 처음알았다*/
+      text-align: center;
+      font-size: 20px;    
+      /*float: left;  왼쪽으로 붙게 한다*/
+      /*background-color: #5e35b1;*/
+      /*background-color: aqua;*/
+      overflow: hidden;
+    }
+    
+    /*바닥면에 오는 것을 여기다가 정리한다*/
+    footer
+    {
+      /*float: left;*/
+      position: relative;
+      margin-top: 0; /*위 박스와 10px 띄고*/ 
+      margin-bottom: 0;
+      clear: both; 
+      font-size: 20px;
+	  text-align:center;
+     
+      /*margin-bottom:0;*/  /*아래 는 0고정*/
+      /*
+      left: 0;
+      right: 0;
+      top: 0 auto;    
+      */
+      width: 100%; 
+      height: 30px; 
+      border-bottom: 1px solid #333333;
+      background-color:#dddddd;
+      /*background-color: #673ab7;*/
+    }  
+  
+    /*모바일 페이지*/
+    /*
+    @media (max-width: 1220px)
+    {
+         div#WRAP_PAGE {width: 100%;}
+         div#HEADER{width: 100%;}
+         div#LEFT_NAVIGATION_MENU{width: 100%;}
+         div#RIGHT_CONTENT{width: 100%;}
+         footer{width: 100%;}
+    }     
+    */
+    /* 화면 너비 0 ~ 768px */
+     /*
+    @media (max-width: 768px)
+    {
+       div#WRAP_PAGE {width: 100%;}
+       div#HEADER{width: 100%;}
+       div#LEFT_NAVIGATION_MENU{width: 100%;}
+       div#RIGHT_CONTENT{width: 100%;}
+       footer{width: 100%;}
+     }
+     */
+    /* 화면 너비 0 ~ 480px */
+    /*
+    @media (max-width: 480px)
+    {
+        div#WRAP_PAGE {width: 50%;}
+        div#HEADER{width: 100%;}
+        div#LEFT_NAVIGATION_MENU{width: 100%;}
+        div#RIGHT_CONTENT{width: 100%;}
+        footer{width: 100%;}
+     }
+    */
+    </style>
+</head>
+<body>
+    <div id="WRAP_PAGE"> <!-- 랩을 싼다-->
+      
+       <div id="HEADER"><!--헤더부분 -->
+        다국에페이지 준비중입니다.
+       </div><!-- 헤더부분 -->
+       
+       <div id="LEFT_NAVIGATION_MENU">
+        <img src="00.IMG_ICO_AND_LOGO/LOGO.png" width="180" height="186" title="토산의 로고입니다 멋있죠?"/><br>
+           <a href="01.KOR_INDEX.HTML">* Welcome to Korea *</a>
+           
+        <h4 style="margin-top: 10%"><font color="red" >  동황토산  (주)</font></h4>
+       
+       <section style="margin-top: 10%">
+         <a href="02.KOR_CEO_GREETING.HTML">-CEO 인사말</a><br>
+         <a href="03.KOR_DWH_INTRODUCTION_.HTML">-회사소개</a><br> 
+         <a href="04.KOR_DWH_SH_MARKET.HTML">-쇼핑매장</a><br>
+         <a href="05.KOR_DWH_PRODUCT.HTML">-제품소개</a><br>
+         <a href="06.KOR_DWH_DIRECTIONS.HTML">-오시는 길</a><br>
+       </section>
+       
+       <h4 style="margin-top: 10%"><font color="red" >  고려호간단 (주)</font></h4>
+        
+        <section style="margin-top: 10%">
+         <a href="07.KOR_GOH_INTRODUCTION.HTML">-회사소개</a><br>
+         <a href="08.KOR_GOH_SH_MARKET.HTML">-쇼핑매장</a><br>
+         <a href="09.KOR_GOH_PRODUCT.HTML">-제품소개</a><br>
+         <a href="10.KOR_GOH_DIRECTIONS.HTML">-오시는길</a><br>
+        </section>
+        
+        <h4 style="margin-top: 10%"><font color="red" >  부산지점(R)</font></h4>
+        
+        <section style="margin-top: 10%">
+        <!--
+        <a href="01.CONTENT_PAGE/03.BUSAN/01.BUSAN_INTRODUCTION.HTML">-회사소개</a><br>
+        -->
+        <a href="11.KOR_BUS_SH_MARKET.HTML">-쇼핑매장</a><br>
+        <!--<a href="01.CONTENT_PAGE/03.BUSAN/03.BUSAN_PRODUCT_DESCRIPTION.HTML">-제품소개</a><br>-->
+        <a href="12.KOR_BUS_DIRECTIONS.HTML">-오시는길</a><br>
+        </section>
+        
+        <!--<h4><font color="red" >  지점소개</font></h4>-->
+        <h4 style="margin-top: 10%"><font color="red" >  제주지점</font></h4>
+        
+        <section style="margin-top: 10%">
+        <!--
+        <a href="00.CONTENT_PAGE/04.JEJU_ISLAND/01.JEJU_INTRODUCTION.HTML"> -회사소개</a><br>
+        -->
+        <a href="13.KOR_JEZ_SH_MARKET.HTML"> -쇼핑매장</a><br>
+        <!--<a href="01.CONTENT_PAGE/04.JEJU_ISLAND/03.JEJU_PRODUCT_DESCRIPTION.HTML"> -제품소개</a><br>-->
+        <a href="14.KOR_JEZ_DIRECTIONS.HTML"> -오시는길</a><br>
+        </section>
+        
+        <div style="margin-top: 10%"> <!-- 일부러 사이띄기-->
+        <section>
+         <a href="15.KOR_Q_AND_A.HTML">문의사항(Q&A)</a><br>
+         <!--<a href="#">협력업체(죽은링크)</a>-->
+        </section>
+        </div>
+        </div>
+        
+        <div id="RIGHT_CONTENT">
+        <div>
+            <h1>호간단에 방문을 환영합니다.</h1>
+            <h4>-고려호간단 제품소개</h4>
+        </div>
+           
+        <div style="align-content: center"> 
+        
+        <img src="08.IMG_HGD_PRODUCT/00.MAIN.jpg" width="98%" height="389" alt="호간단제품1"><br> 
+        <img src="08.IMG_HGD_PRODUCT/01.10T.jpg" width="98%" height="478" alt="호간단제품2"><br>
+        <img src="08.IMG_HGD_PRODUCT/02.60T.png" width="98%" height="478" alt="호간단제품3"><br>
+        <img src="08.IMG_HGD_PRODUCT/03.120T.jpg" width="98%" height="478" alt="호간단제품4"><br>
+        <img src="08.IMG_HGD_PRODUCT/04.240T.jpg" width="98%" height="478" alt="호간단제품5"><br>
+        <img src="08.IMG_HGD_PRODUCT/05.CG.jpg" width="98%" height="478" alt="청원골드"><br>
+    
+        </div>
+        </div>
+        
+        <footer>제작 : 총무부 2019 <a href="meilto:dhgs8898@naver.com">동황토산메일</a></footer>
+        
+    </div> <!-- 랩을 닫다-->
+</body>
+</html>
