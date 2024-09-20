@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인삼제품_디스플레이</title>
+    <!-- 검색 엔진에서 검색되는 것-->
+    <meta name="author" content="CANSIV">
+     <!--사이트 아이콘의 등록 -->
+   <meta property="og:image" content="LOGO/128X128.ico">
+   <!--사이트 썸네일 등록 -->
+   <meta name="thumbnail" content="LOGO/LOGO.png">
+   <!-- 파비콘적용 -->
+   <link rel="shortcut icon" href="LOGO/favicon.ico">
+   <link rel="icon" href="LOGO/favicon.ico">
+</head>
+
+<style>
+    *{margin: 0; padding: 0;}
+    body {/*background: #f3e5f5;*/}
+    #wrap {width: 1920px; margin: 0 auto;} 
+   header 
+    {
+      width: 100%; 
+      height: 70px;  
+      text-align: center;
+      /*font-size-adjust: auto;*/
+      font-size: 30px;
+      
+    }
+    section {margin-left: 15%; width: 70%; height: 800px; /*background: #673ab7;*/}
+    #product_list
+    {
+        margin-top:  10%;
+        margin-left: 10%;    
+    }
+    footer {clear: both; width: 100%; height: 150px; /*background: #5e35b1;*/}
+    
+    /* 화면 너비 0 ~ 1920px */
+    @media (max-width: 1920px)
+    {
+      #wrap {width: 100%;}
+      #rotate_film {margin-top: 2%; width: 100%;}
+      #rotate_film > img {width: 100%; height: 100%;}
+      #product_list > img {width: 100%; height: 100%;}
+    }
+
+    /* 화면 너비 0 ~ 720px */
+    @media (max-width: 720px)
+    {
+      #wrap {width: 100%;}
+      #rotate_film {margin-top: 2%; width: 100%;}   
+      #rotate_film > img {width: 100%; height: 100%;}
+      #product_list > img {width: 100%; height: 100%;}
+    }
+
+    /* 화면 너비 0 ~ 480px */
+    @media (max-width: 480px)
+    {
+      #wrap {width: 100%;}
+      #rotate_film {margin-top: 2%; width: 100%;}
+      #rotate_film > img {width: 100%; height: 100%;}
+      #product_list > img {width: 100%; height: 100%;}
+      /*header {height: 300px;}*/
+      section {float: none; width: 100%; height: 300px;}
+    }
+</style>
+
+<body>
+    <div id="wrap">
+        
+        <section>
+        <header>
+           <p style="text-align: center;" >인삼 상품 디스플레이</p>
+        </header>
+
+        <div id="rotate_film"> 
+        <img id="SLIDES_SHOW01"  width="830" height="544" alt="">   
+        <!--<img id="SLIDES_SHOW01" src="Rotate_Film/INSAM01_830_830.jpg" width="830" height="544" alt="">-->
+
+     <script>
+        var IMG_SRC01 = new Array("Rotate_Film/INSAM01_830_830.jpg",
+                                  "Rotate_Film/INSAM02_830_830.jpg",
+                                  "Rotate_Film/INSAM03_830_830.jpg",
+                                  "Rotate_Film/INSAM04_830_830.jpg",
+                                  "Rotate_Film/INSAM05_830_830.jpg",
+                                  "Rotate_Film/INSAM06_830_830.jpg");
+        var i = 0;
+ 
+        slideshow_timer01();
+ 
+        function slideshow_timer01(){
+        if (i == 5){
+            i= 0;
+            } 
+            else {
+            i++;
+            }
+            document.getElementById("SLIDES_SHOW01").src=IMG_SRC01[i];
+            setTimeout("slideshow_timer01()",3000); 
+            }
+        </script>
+        </div>
+        
+        <div id="product_list">
+          <table>
+           <tr>
+            <td><a href="01.POWDER.HTML">
+            <img src="Product_Picture/01.POWDER.png" width="70%" height="70%";></a></td>
+            <td><a href="02.EXTRACT.HTML">
+            <img src="Product_Picture/02.EXTRACT.png" width="70%" height="70%";></a></td>
+           </tr>
+           <tr>
+            <td><a href="03.HOYNED_GINSENG.HTML">
+            <img src="Product_Picture/03.HONYD_GINSENG.png" width="70%" height="70%";></a></td>
+             <td><a href="04.TEKUKSAM.HTML">
+            <img src="Product_Picture/04.TEGUKSAM.png" width="70%" height="70%";></a></td>
+            </tr>
+            </table>
+
+           
+        </div>
+        </section>
+        
+    </div>
+    
+</body>
+</html>

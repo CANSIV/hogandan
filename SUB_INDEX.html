@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동황_인스턴트페이지</title>
+    <!-- 검색 엔진에서 검색되는 것-->
+    <meta name="author" content="CANSIV">
+     <!--사이트 아이콘의 등록 -->
+   <meta property="og:image" content="LOGO/128X128.ico">
+   <!--사이트 썸네일 등록 -->
+   <meta name="thumbnail" content="LOGO/LOGO.png">
+   <!-- 파비콘적용 -->
+   <link rel="shortcut icon" href="LOGO/favicon.ico">
+   <link rel="icon" href="LOGO/favicon.ico">
+</head>
+
+<style>
+    *{margin: 0; padding: 0;}
+    body {/*background: #f3e5f5;*/}
+    #wrap {width: 1200px; margin: 0 auto;} 
+    header 
+    {
+      width: 100%; 
+      height: 70px;  
+      text-align: center;
+      /*font-size-adjust: auto;*/
+      font-size: 50px;
+      
+    }
+   
+    section 
+    {
+      display:inline-block; 
+      display:inline;
+      /*상위 두가지로 가운데 정렬가능*/
+      width: 70%; 
+      height: 100%; 
+      text-align: center;
+    }
+    
+    #content{ }
+    
+    #banner
+    {
+      /*display:block;*/
+      margin-top: 40px;
+      /*float: left;*/
+      /*
+      display:inline-block; 
+      display:inline;
+      */
+      /*margin-top: 50px;*/
+      /*margin-left: 20%;*/
+      /*width: 100%;*/
+    }
+    
+    footer 
+    {
+      
+      width: 100%; 
+      height: 100px;   
+      text-align: center;
+      font-size: 30px;
+    }
+    
+    /* 화면 너비 0 ~ 1920px FHD*/
+    @media (max-width: 1920px)
+    {
+      #wrap {width: 100%;}
+      section {width: 60%;}
+    }
+
+    /* 화면 너비 0 ~ 720px HD*/
+    @media (max-width: 720px)
+    {
+      #wrap {width: 100%;}
+    }
+
+    /* 화면 너비 0 ~ 480px SD*/
+    @media (max-width: 100%)
+    {
+      #wrap {width: 480px;}
+      header {height: 300px;}
+    
+      section {float: none; width: 100%; height: 300px;}
+    }
+</style>
+
+<body>
+    <div id="wrap">
+        <header>
+           <p>WELCOM TO KOREA</p>
+           <p style="font-size: 10px;">24년12월31일까지 일정기간 동안 오픈됩니다.</p>
+        </header>
+        
+        <section>
+         <div id="content"><!--content -->
+         <a href="dongwhang/Product_list.html"><img src="IMAGE/MAIN_PAGE_LIFT.png"  width="30%" height="30%" title="인삼" style="margin-top: 5%"></a>
+        
+         <a href="hogandan/Product_list.html"><img src="IMAGE/MAIN_PAGE_RIGHT.png"  width="30%" height="30%" title="호간단" 
+         style=" margin-top: 5%"></a>    
+         </div><!--content -->
+        
+        <div id="banner"><!--banner -->
+        <article><img src="IMAGE/DONGWHANG_BANNER.png" width="10%" title="동황베너" alt="동황베너" style="float: left; margin-left: 15%;"></article>
+        <article><img src="IMAGE/HOGANDAN_BANNER.png" width="10%" title="호간단베너" alt="호간단베너" style="float: left; margin-left: 20%;"></article>
+        <article><img src="IMAGE/REDPINE_BANNER.png" width="10%" title="적송베너" alt="적송베노" style="float: left; margin-left: 20%;"></article>
+        </div>
+        </section>
+        <footer style="margin-top: 25%";>
+            <ul>
+                <li style="float: left;  list-style-type: none;">
+                <a href="INTRODUCTION.HTML">회사소개</a></li>
+                <li style="float: right; list-style-type: none;">
+                <a href="CEO_GREETING.HTML">CEO소개</a></li>
+            </ul>
+                 
+        </footer>
+    </div>
+    
+</body>
+</html>
