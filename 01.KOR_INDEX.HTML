@@ -188,7 +188,23 @@
     */
     </style>
 </head>
-<body>
+<body onload ="javascript:image_popup()">
+       <script type=text/javascript>
+           /* 일반 창
+           function popup(){
+            window.open("", "popup", "width=400, height=500, history=no, resizable=no, status=no, scrollbars=yes, menubar=no")
+            }
+            */
+           /*이미지를 넣은창*/
+           function image_popup(url) { var imgObj = new Image(); 
+           imgObj.src = "01.IMG_INDEX_PAGE/popup.jpg"; 
+           imageWin = window.open("", "Null_popup", "width=" + imgObj.width + "px, height=" + imgObj.height + "px");  
+           imageWin.document.write("<html><body style='margin:0'>");  
+           imageWin.document.write("<a href=javascript:window.close()><img src='" + imgObj.src + "' border=0></a>");  
+           imageWin.document.write("</body><html>");  
+           imageWin.document.title = imgObj.src;}
+       </script>
+          
     <div id="WRAP_PAGE"> <!-- 랩을 싼다-->
       
        <div id="HEADER"><!--헤더부분 -->
@@ -253,6 +269,7 @@
         <div>
             <h1>동황토산에 방문을 환영합니다.</h1>
         </div>
+        
         <img id="SLIDES_SHOW01" src="01.IMG_INDEX_PAGE/SBR1151-copy-1-copy_1000.jpg" width="830" height="544" alt="">
 
      <script>
@@ -308,7 +325,7 @@
       <img src="01.IMG_INDEX_PAGE/2_17_1000.png" width="98%" height="125" alt="아래쪽">
       </div> 
         </div>
-        
+          
         <footer>제작 : 총무부 2019 <a href="meilto:dhgs8898@naver.com">동황토산메일</a></footer>
         
     </div> <!-- 랩을 닫다-->
